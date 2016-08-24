@@ -1,0 +1,15 @@
+To build csvtotexyou need a acurrent version of mingw32 or VS Studio.
+
+Type the follow commands from a terminal: (from root directory of programm)
+mkdir build
+cd build
+
+cmake -G "Visual Studio 14 Win64" ..	# for 64 Bit VS build
+-- or --
+cmake -G "MinGW Makefiles" ..		# for mingw32 builds
+mingw32-make
+-- or --
+cmake -G "Unix Makefiles" ..		# for linux builds
+make
+
+In the case of a VS Studio build, you can open the generated solution / project file and build it through the Visual Studio gui.
