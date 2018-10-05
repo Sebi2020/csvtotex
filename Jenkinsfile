@@ -2,14 +2,20 @@ pipeline {
 agent any
 stages {
 	stage('Configure') {
-		sh 'cmake "CMakeLists.txt"'		
+	steps {
+		sh 'cmake "CMakeLists.txt"'
+	}
 	}
 	stage('Build') {
+	steps {
 		sh 'make'
 	}
+	}
 	stage('Package') {
+	steps {
 		sh 'gzip -c csvtotex > csvtotex.zip'
 		archiveArtifacts artifact: '*.zip'
+	}
 	}
 }
 }
