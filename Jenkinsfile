@@ -1,5 +1,5 @@
 pipeline {
-agents { docker { image: 'library/gcc' }}
+agent { any }
 stages {
 	stage('Configure') {
 		sh 'cmake "CMakeLists.txt"'		
