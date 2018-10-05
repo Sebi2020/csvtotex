@@ -14,7 +14,7 @@ stages {
 	stage('Package') {
 	steps {
 		sh 'gzip -c csvtotex > csvtotex.zip'
-		archiveArtifacts artifact: '*.zip'
+		archiveArtifacts artifacts: '*.zip'
 	}
 	}
 }
